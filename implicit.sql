@@ -1,0 +1,14 @@
+-- use employees;
+-- select * from employees where JOB_ID IN (select JOB_IDENT from JOBS);
+-- select * from employees where JOB_ID IN (select JOB_IDENT FROM JOBS where JOB_TITLE='Jr.SoftwareDeveloper') ; 
+-- select JOB_TITLE,MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS where JOB_IDENT in(select JOB_ID FROM employees where SALARY>70000);
+-- select JOB_TITLE,MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS where JOB_IDENT in(select JOB_ID from employees where year(B_DATE)>1976);
+-- select JOB_TITLE, MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS  where JOB_IDENT IN (select JOB_ID from EMPLOYEES where YEAR(B_DATE)<1976 and SEX='F' );
+
+-- ------------------------------------------ --
+-- implicit cartesian/cross
+-- select * from employees,jobs 
+-- select * from employees,JOBS where employees.JOB_ID = JOBS.JOB_IDENT;
+-- select * from employees E,JOBS J where E.JOB_ID = J.JOB_IDENT;
+-- select F_NAME,L_NAME,JOB_TITLE from employees E,JOBS J where E.JOB_ID = J.JOB_IDENT;
+-- select E.EMPLOYEE_ID,E.F_NAME,E.L_NAME,J.JOB_TITLE from employees E,JOBS J where E.JOB_ID = J.JOB_IDENT;
