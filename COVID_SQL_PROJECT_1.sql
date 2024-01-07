@@ -27,7 +27,7 @@ ORDER BY Population_effected DESC;
 
 -- Looking at countries with highest infection rate compared to population 
 SELECT 
-location,  MAX(total_cases) as Highest_count, population, MAX((total_cases/population))*100 as Percent_Population_effected
+location,  MAX(total_cases) as Highest_count,  MAX((total_cases/population))*100 as Percent_Population_effected
 FROM coviddeaths
 WHERE continent is NOT NULL
 GROUP BY location, population
@@ -116,5 +116,12 @@ Join covidvaccinatiion vac
 	On dea.location = vac.location
 	and dea.date = vac.date
 where dea.continent is not null;
+
+Select location, SUM(new_deaths) as TotalDeathCount
+From coviddeaths
+Where continent is null 
+and location not in ('World', 'European Union', 'International')
+Group by location
+order by TotalDeathCount desc
 
 SELECT * FROM PercentagePopulationVaccinated;
