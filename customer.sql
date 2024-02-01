@@ -101,3 +101,8 @@ INSERT INTO Customer (Id, FirstName, LastName, City, Country, Phone) VALUES
 (91, 'Zbyszek', 'Piestrzeniewicz', 'Warszawa', 'Poland', '(26) 642-7012');
 
 SELECT * FROM customer
+-- 
+
+-- select all name start from A
+SELECT FirstName FROM customer;
+-- select Antonio *
