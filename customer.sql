@@ -104,5 +104,9 @@ SELECT * FROM customer
 -- 
 
 -- select all name start from A
-SELECT FirstName FROM customer;
+SELECT FirstName FROM customer WHERE FirstName LIKE "%a%%";
 -- select Antonio *
+SELECT `FirstName`, `Phone` FROM customer WHERE Country LIKE "F%";
+
+-- LIMIT
+SELECT `FirstName`, `Phone`, `Country` FROM customer WHERE Country LIKE "P%" LIMIT 10000;
