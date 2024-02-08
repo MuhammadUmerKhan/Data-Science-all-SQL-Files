@@ -110,3 +110,13 @@ SELECT `FirstName`, `Phone` FROM customer WHERE Country LIKE "F%";
 
 -- LIMIT
 SELECT `FirstName`, `Phone`, `Country` FROM customer WHERE Country LIKE "P%" LIMIT 10000;
+
+SELECT * FROM customer;
+-- INSERT
+INSERT INTO customer VALUES(92, "Muhammad", "Umer Khan", "Karachi", "Pakistan", "Ma nhi bataonga");
+SELECT * FROM customer WHERE Id = 92;
+-- UPDATE
+UPDATE customer SET `Phone` = '0343-2187868'
+WHERE Id = 92;
+-- DELETE
+DELETE FROM customer WHERE `Id` = 92;
