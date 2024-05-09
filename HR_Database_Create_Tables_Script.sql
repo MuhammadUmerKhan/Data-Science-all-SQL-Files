@@ -50,3 +50,5 @@ CREATE TABLE LOCATIONS (
                           DEP_ID_LOC CHAR(9) NOT NULL,
                           PRIMARY KEY (LOCT_ID,DEP_ID_LOC)
                         );
+
+select * from departments;
