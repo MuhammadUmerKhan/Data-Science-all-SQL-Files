@@ -1,3 +1,5 @@
+create database HR;
+use HR;
 DROP TABLE IF EXISTS EMPLOYEES;
 DROP TABLE IF EXISTS JOB_HISTORY;
 DROP TABLE IF EXISTS JOBS;
@@ -52,3 +54,18 @@ CREATE TABLE LOCATIONS (
                         );
 
 select * from departments;
+
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+
+
+
+
+
+
+
+
+
